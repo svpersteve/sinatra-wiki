@@ -1,14 +1,12 @@
-<h1>Home</h1>
+<div class="container">
+  <h2>Pages</h2>
 
-<p><a href='/new'>Create page</a></p>
+  <% Dir.glob('pages/*.txt') do |page| %>
+    <% title_without_path = page.gsub('pages/', '') %>
+    <% title = title_without_path.gsub('.txt', '') %>
 
-<h2>Pages</h2>
-
-<% Dir.glob('pages/*.txt') do |page| %>
-  <% title_without_path = page.gsub('pages/', '') %>
-  <% title = title_without_path.gsub('.txt', '') %>
-
-  <a href="/<%= title %>">
-    <p><%= title %></p>
-  </a>
-<% end %>
+    <a href="/<%= title %>">
+      <p><%= title %></p>
+    </a>
+  <% end %>
+</div>

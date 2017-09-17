@@ -1,6 +1,5 @@
-<h1>Editing <%= @title %></h1>
-
-<div>
+<div class="container">
+  <h1>Editing <%= @title %></h1>
   <form method='post' action="/<%= @title %>">
     <input type='hidden' name='_method' value='put'>
     <fieldset>
@@ -11,8 +10,9 @@
         <%= @content %>
       </textarea>
     </fieldset>
-      <input type='submit'>
+    <div class="buttons">
+      <input type='submit' class='button'>
+      <a href='/' class='button'>Back</a>
+    </div>
   </form>
 </div>
-
-<a href='/'>Back</a>

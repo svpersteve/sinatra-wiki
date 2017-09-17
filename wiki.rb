@@ -21,6 +21,10 @@ get '/new' do
   erb :new
 end
 
+get '/styles/app.css' do
+  scss :app
+end
+
 post '/create' do
   save_content(params[:title], params[:content])
   redirect URI.escape "/#{params[:title]}"

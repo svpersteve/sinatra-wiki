@@ -1,4 +1,10 @@
-<h1><%= @title %></h1>
-<p><%= @content %></p>
-<a href='/'>Back</a>
-<a href='/<%= @title %>/edit'>Edit this page</a>
+<div class="container">
+  <h1><%= @title %></h1>
+  <div class='content'>
+    <%= @content %>
+  </div>
+  <div class='buttons'>
+    <a href='/' class='button'>Back</a>
+    <a href='/<%= @title %>/edit' class='button'>Edit this page</a>
+  </div>
+</div>

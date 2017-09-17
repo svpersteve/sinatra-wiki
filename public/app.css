@@ -1,0 +1,50 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.buttons .button {
+  margin-right: 20px;
+}
+
+.button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+fieldset {
+  border: 0;
+}
+
+.content {
+  white-space: pre-wrap;
+  line-height: 1.25;
+}
