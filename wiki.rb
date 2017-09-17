@@ -14,7 +14,6 @@ def save_content(title, content)
 end
 
 get '/' do
-  'Hi'
   erb :index
 end
 
@@ -32,4 +31,16 @@ get '/:title' do
   @content = page_content(@title)
   erb :show
 end
+
+get '/:title/edit' do
+  @title = params[:title]
+  @content = page_content(@title)
+  erb :edit
+end
+
+put "/:title" do
+  @title = params[:title]
+  @content = params[:content]
+  save_content @title, @content
+  redirect URI.escape "/#{params[:title]}"
 end
