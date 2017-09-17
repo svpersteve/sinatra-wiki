@@ -1,6 +1,14 @@
 <h1>Home</h1>
 
-<p>Visit /pagename to load a page.</p>
+<p><a href='/new'>Create page</a></p>
 
-<p>Or create a <a href='/new'>new page</a></p>
+<h2>Pages</h2>
 
+<% Dir.glob('pages/*.txt') do |page| %>
+  <% title_without_path = page.gsub('pages/', '') %>
+  <% title = title_without_path.gsub('.txt', '') %>
+
+  <a href="/<%= title %>">
+    <p><%= title %></p>
+  </a>
+<% end %>
